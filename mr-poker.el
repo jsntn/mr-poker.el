@@ -4,7 +4,7 @@
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: games
-;; URL: https://github.com/jsntn/mr-poker
+;; URL: https://github.com/jsntn/mr-poker.el
 
 ;;; Commentary:
 
