@@ -4,10 +4,11 @@ mr-poker.el is an Emacs package that allows you to practice memorizing poker car
 
 ## Installation
 
-mr-poker.el can be installed using [straight.el](https://github.com/raxod502/straight.el). To install, add the following to your Emacs configuration file:
+mr-poker.el can be installed using [straight.el](https://github.com/radian-software/straight.el). To install, add the following to your Emacs configuration file:
 
 ```emacs
-(straight-use-package '(mr-poker :type git :host github :repo "jsntn/mr-poker.el"))
+(straight-use-package
+ '(mr-poker :type git :host github :repo "jsntn/mr-poker.el"))
 ```
 
 ## Usage
