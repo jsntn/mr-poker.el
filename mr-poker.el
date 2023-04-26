@@ -12,7 +12,7 @@
 
 
 (defun mr-poker-display-instructions ()
-  "Display instructions for the card abbreviations."
+  "Display instructions for using the Mr Poker."
   (interactive)
   (with-current-buffer (get-buffer-create "*Mr Poker Instructions*")
     (erase-buffer)
