@@ -11,6 +11,26 @@
 ;;; Code:
 
 
+(defun mr-poker-display-instructions ()
+  "Display instructions for the card abbreviations."
+  (interactive)
+  (with-current-buffer (get-buffer-create "*Mr Poker Instructions*")
+    (erase-buffer)
+    (insert "Mr Poker Instructions:\n\n")
+    (insert "mr-poker-shuffle-and-display\n")
+    (insert "This function shuffles the deck of cards and displays a specified number of cards in a new *Shuffled Cards* buffer.\n\n")
+    (insert "mr-poker-recall\n")
+    (insert "This function allows you to recall the shuffled cards displayed in the *Shuffled Cards* buffer.\n\n")
+    (insert "To recall a card, enter its abbreviation in the following format:\n\n")
+    (insert "Suit (S, H, D, C) + Value (A, 2-10, J, Q, K)\n\n")
+    (insert "For example:\n")
+    (insert "- SA for Spades Ace\n")
+    (insert "- H8 for Hearts 8\n")
+    (insert "- D10 for Diamonds 10\n")
+    (insert "- CQ for Clubs Queen\n\n")
+    (display-buffer (current-buffer))
+    (message "Mr Poker Instructions displayed.")))
+
 (defun mr-poker-def-cards ()
   "Define all the poker cards and return a list of their values."
   (let ((values '("Ace" "2" "3" "4" "5" "6" "7" "8" "9" "10" "Jack" "Queen" "King"))
