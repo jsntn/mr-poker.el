@@ -15,6 +15,10 @@ mr-poker.el can be installed using [straight.el](https://github.com/radian-softw
 
 After installing mr-poker.el, you can use the following functions:
 
+`mr-poker-display-instructions`
+
+This function displays instructions for using the Mr Poker, and the instructions are displayed in a new *Mr Poker Instructions* buffer on the screen.
+
 `mr-poker-shuffle-and-display`
 
 This function shuffles the deck of cards and displays a specified number of cards in a new buffer. To use it, type `M-x mr-poker-shuffle-and-display` and enter the number of cards you want to shuffle and display.
