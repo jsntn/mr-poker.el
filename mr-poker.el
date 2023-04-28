@@ -83,7 +83,7 @@ Recognize abbreviations like 'C6'."
          ("7" . "7")
          ("8" . "8")
          ("9" . "9")
-         ("10" . "10")
+         ("T" . "10")
          ("J" . "Jack")
          ("Q" . "Queen")
          ("K" . "King"))))
