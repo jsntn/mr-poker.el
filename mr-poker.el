@@ -53,12 +53,6 @@ and return the shuffled list."
 	  (setcar (nthcdr n list) tmp)))))
   list)
 
-(defun mr-poker-shuffle-cards (num-cards)
-  "Shuffle the deck of cards and return a list of the specified number of cards."
-  (let* ((cards (mr-poker-def-cards))
-	 (shuffled-cards (mr-poker-shuffle cards)))
-    (seq-take shuffled-cards num-cards)))
-
 (defun mr-poker-shuffle-and-display ()
   "Shuffle the deck of cards and display a specified number of cards in a new buffer."
   (interactive)
