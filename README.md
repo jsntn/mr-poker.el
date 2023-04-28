@@ -11,6 +11,10 @@ mr-poker.el can be installed using [straight.el](https://github.com/radian-softw
  '(mr-poker :type git :host github :repo "jsntn/mr-poker.el"))
 ```
 
+## Upgrade
+
+Use `M-x straight-pull-package` to get the latest version.
+
 ## Usage
 
 After installing mr-poker.el, you can use the following functions:
