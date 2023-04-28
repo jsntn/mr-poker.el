@@ -102,11 +102,15 @@ each card one by one to test if they are in the correct order."
   (with-current-buffer "*Shuffled Cards*"
     (let ((cards (split-string (buffer-string) "\n" t))
 	  (index 0))
+      (if current-prefix-arg  ; Check for C-u
+	  (setq cards (reverse cards))) ; If present, reverse cards list
       (while (< index (length cards))
 	(let ((user-input
 	       (read-string
 		(format "Recall card %d (abbreviation): "
-			(1+ index)))))
+			(if current-prefix-arg
+			    (- (length cards) index)
+			    (1+ index))))))
 	  (setq user-input (upcase user-input)) ; Convert to uppercase
 	  (let ((full-name (mr-poker-abbrev-to-full user-input)))
 	    (while (not (equal full-name (nth index cards)))
@@ -114,10 +118,16 @@ each card one by one to test if they are in the correct order."
 	      (setq user-input
 		    (read-string
 		     (format "Recall card %d (abbreviation): "
-			     (1+ index))))
+			(if current-prefix-arg
+			    (- (length cards) index)
+			    (1+ index)))))
 	      (setq user-input (upcase user-input))
 	      (setq full-name (mr-poker-abbrev-to-full user-input)))
-	    (message "Correct! Card %s is %s." (1+ index) full-name)))
+	    (message "Correct! Card %s is %s."
+		     (if current-prefix-arg
+			 (- (length cards) index)
+		       (1+ index))
+		     full-name)))
     (setq index (1+ index))))))
 
 
