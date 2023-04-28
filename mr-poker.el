@@ -94,14 +94,19 @@ Recognize abbreviations like 'C6'."
     (concat (cdr (assoc suit-abbrev suits)) " "
         (cdr (assoc value-abbrev values)))))))
 
-(defun mr-poker-recall ()
+(defvar mr-poker-last-index nil
+  "The last index processed by the mr-poker-recall function.")
+
+(defun mr-poker-recall (&optional resume)
   "Recall the shuffled cards displayed in the *Shuffled Cards* buffer.
 Recognize the abbreviation in upper or lower case, and prompt the user to recall
 each card one by one to test if they are in the correct order."
   (interactive)
   (with-current-buffer "*Shuffled Cards*"
     (let ((cards (split-string (buffer-string) "\n" t))
-	  (index 0))
+	  (index (if (and resume mr-poker-last-index)
+		     mr-poker-last-index
+		   0)))
       (if current-prefix-arg  ; Check for C-u
 	  (setq cards (reverse cards))) ; If present, reverse cards list
       (while (< index (length cards))
@@ -110,7 +115,7 @@ each card one by one to test if they are in the correct order."
 		(format "Recall card %d (abbreviation): "
 			(if current-prefix-arg
 			    (- (length cards) index)
-			    (1+ index))))))
+			  (1+ index))))))
 	  (setq user-input (upcase user-input)) ; Convert to uppercase
 	  (let ((full-name (mr-poker-abbrev-to-full user-input)))
 	    (while (not (equal full-name (nth index cards)))
@@ -118,9 +123,9 @@ each card one by one to test if they are in the correct order."
 	      (setq user-input
 		    (read-string
 		     (format "Recall card %d (abbreviation): "
-			(if current-prefix-arg
-			    (- (length cards) index)
-			    (1+ index)))))
+			     (if current-prefix-arg
+				 (- (length cards) index)
+			       (1+ index)))))
 	      (setq user-input (upcase user-input))
 	      (setq full-name (mr-poker-abbrev-to-full user-input)))
 	    (message "Correct! Card %s is %s."
@@ -128,7 +133,17 @@ each card one by one to test if they are in the correct order."
 			 (- (length cards) index)
 		       (1+ index))
 		     full-name)))
-    (setq index (1+ index))))))
+	(setq index (1+ index))
+	(setq mr-poker-last-index index)))))
+
+(defun mr-poker-recall-resume ()
+  "Resume the mr-poker-recall function from the last index processed."
+  (interactive)
+  (if mr-poker-last-index
+      (progn
+        (message "Resuming from index %d." mr-poker-last-index)
+        (mr-poker-recall t))
+    (message "No last index recorded. Please start mr-poker-recall first.")))
 
 
 (provide 'mr-poker)
