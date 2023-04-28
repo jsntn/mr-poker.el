@@ -27,6 +27,28 @@ This function shuffles the deck of cards and displays a specified number of card
 
 This function allows you to recall the shuffled cards displayed in the *Shuffled Cards* buffer. It recognizes the abbreviation in upper or lower case and prompts you to recall each card one by one to test if they are in the correct order. To use it, display the *Shuffled Cards* buffer, type `M-x mr-poker-recall`, and follow the prompts.
 
+With universal argument (`C-u`), recall in reverse order.
+
+To recall a card, enter its abbreviation in the following format:
+
+Suit (S, H, D, C) + Value (A, 2-9, T, J, Q, K)
+
+For example:
+
+- SA for Spades Ace
+- H8 for Hearts 8
+- DT for Diamonds 10  --> T for 10
+- CQ for Clubs Queen
+
+It supports the PAUSE by `C-g`.
+
+`mr-poker-recall-resume`
+
+This function allows you to resume the mr-poker-recall function from your last
+left off (`C-g`).
+
+To resume the reverse order recall, use universal argument (`C-u`).
+
 ## License
 
 mr-poker.el is licensed under the GPL 3.0 License. See LICENSE for details.
