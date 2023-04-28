@@ -1,7 +1,7 @@
 ;;; mr-poker.el --- A package to practice memorizing poker cards -*- lexical-binding: t; -*-
 
 ;; Author: Jason Tian <hi@jsntn.com>
-;; Version: 0.1.0
+;; Version: 0.2.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: games
 ;; URL: https://github.com/jsntn/mr-poker.el
