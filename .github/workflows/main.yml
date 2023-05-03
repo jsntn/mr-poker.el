@@ -19,7 +19,7 @@ jobs:
        emacs --help
     - name: emacs processing
       run: |
-       emacs --batch -Q --load publish.el
+       emacs --script publish.el
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
