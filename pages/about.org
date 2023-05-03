@@ -7,7 +7,7 @@ Read more: https://github.com/jsntn/mr-poker.el/blob/main/README.md
 
 * Why this?
 
-[[./images/img_3932.jpg]]
+[[./static/img_3932.jpg]]
 
 [2023-04-24 Mon 18:31]
 
