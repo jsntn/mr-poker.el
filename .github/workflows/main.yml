@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: purcell/setup-emacs@master
       with:
-       version: 24.5
+       version: 27.2
     - uses: actions/checkout@v2
     - name: check version
       run: |
