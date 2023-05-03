@@ -2,6 +2,7 @@
 #+DATE: <2023-04-28>
 #+OPTIONS: toc:nil num:nil
 #+OPTIONS: ^:nil
+#+SLUG: 0.2.0
 
 Mr Poker v0.2.0 is released.
 
