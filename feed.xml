@@ -10,29 +10,29 @@
      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Simple Blog</title>
+    <title>Mr Poker</title>
     <atom:link
-      href="http://localhost:8000/feed.xml"
+      href="https://jsntn.github.io/mr-poker.el/feed.xml"
       rel="self" type="application/rss+xml" />
-    <link>http://localhost:8000/</link>
+    <link>https://jsntn.github.io/mr-poker.el/</link>
     <description><![CDATA[]]></description>
     <language>en</language>
     <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
-    <lastBuildDate>Wed, 03 May 2023 11:24:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 May 2023 11:44:25 +0000</lastBuildDate>
     <generator>weblorg 0.1.0 (https://emacs.love/weblorg)</generator>
     <webMaster>web@master (Blog Author)</webMaster>
     <image>
-      <url>http://localhost:8000/media/img/8bitme.png</url>
+      <url>https://jsntn.github.io/mr-poker.el/media/img/8bitme.png</url>
       <title>Blog Author</title>
-      <link>http://localhost:8000/</link>
+      <link>https://jsntn.github.io/mr-poker.el/</link>
     </image>
 
     
     <item>
       <title>Mr Poker 0.2.0</title>
-      <link>http://localhost:8000/posts/mr-poker-0-2-0.html</link>
+      <link>https://jsntn.github.io/mr-poker.el/posts/mr-poker-0-2-0.html</link>
       <author>author@mail.com (Blog Author)</author>
-      <guid isPermaLink="false">http://localhost:8000/posts/mr-poker-0-2-0.html</guid>
+      <guid isPermaLink="false">https://jsntn.github.io/mr-poker.el/posts/mr-poker-0-2-0.html</guid>
       
         <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
       
@@ -47,9 +47,9 @@ Mr Poker v0.2.0 is released.
     
     <item>
       <title>Mr Poker 0.1.0</title>
-      <link>http://localhost:8000/posts/mr-poker-0-1-0.html</link>
+      <link>https://jsntn.github.io/mr-poker.el/posts/mr-poker-0-1-0.html</link>
       <author>author@mail.com (Blog Author)</author>
-      <guid isPermaLink="false">http://localhost:8000/posts/mr-poker-0-1-0.html</guid>
+      <guid isPermaLink="false">https://jsntn.github.io/mr-poker.el/posts/mr-poker-0-1-0.html</guid>
       
         <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
       
