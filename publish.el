@@ -22,7 +22,7 @@
   :config
   (setq org-html-htmlize-output-type 'css))
 
-(require 'weblorg)
+(use-package weblorg)
 
 ;; Generate blog posts
 (weblorg-route
