@@ -24,6 +24,20 @@
 
 (use-package weblorg :ensure t)
 
+;; set default URL
+(setq weblorg-default-url "https://jsntn.github.io/mr-poker.el")
+
+(setq site-template-vars '(("project_github" . "https://github.com/jsntn/mr-poker.el")
+                           ("site_author" . "Jason Tian")
+                           ("site_name" . "Mr Poker")
+                           ("site_url" . "https://jsntn.github.io/mr-poker.el")
+                           ("site_email" . "hi@jsntn.com")
+                           ("project_description" . "An Emacs package to practice memorizing poker cards")))
+
+(weblorg-site
+ :base-url weblorg-default-url
+ :template-vars site-template-vars)
+
 ;; Generate blog posts
 (weblorg-route
  :name "posts"
