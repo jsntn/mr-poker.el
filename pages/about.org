@@ -7,7 +7,7 @@ Read more: https://github.com/jsntn/mr-poker.el/blob/main/README.md
 
 * Why this?
 
-[[/static/img_3932.jpg]]
+[[./images/img_3932.jpg]]
 
 [2023-04-24 Mon 18:31]
 
@@ -27,4 +27,4 @@ As for when I will begin planning and writing code, only time will tell. 😆
 
 * Read more
 
-- [[/mpc.html][How to memorize poker cards in an effective way?]]
+- [[./mpc.html][How to memorize poker cards in an effective way?]]

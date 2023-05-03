@@ -71,6 +71,11 @@
  :output "output/feed.xml"
  :url "/feed.xml")
 
+(weblorg-route
+ :input-pattern "images/*"
+ :output "output/images/{{ file }}"
+ :url "/images/{{ file }}")
+ 
 (weblorg-copy-static
  :output "output/static/{{ file }}"
  :url "/static/{{ file }}")
