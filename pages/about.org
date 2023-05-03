@@ -1,0 +1,15 @@
+#+TITLE: Why this?
+
+I must say, the title of this article struck a chord with me.
+
+However, in practice, physical playing cards may have their drawbacks. So, I delved into the App Store but was dissatisfied with what I found. And so, I have come up with an idea - I am going to write an Emacs Package myself, using Elisp to implement this function.
+
+I chose to use Emacs Package for two reasons. Firstly, it is where I spend most of my time every day. Secondly, it is a practical application of my three years' worth of Emacs learning.
+
+The name of this Package has already been decided - Mr Poker. To make it sound international, the English name will also be Mr Poker, while the documentation will be in English.
+
+For the license, I will use GPL. Open source and free, following in the footsteps of Linux, even if the code is subpar. Style and sophistication cannot be lost.
+
+The first version will be v0.1.0, following the principles of Semantic Versioning.
+
+As for when I will begin planning and writing code, only time will tell.

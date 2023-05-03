@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches: [site]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: purcell/setup-emacs@master
+      with:
+       version: 24.5
+    - uses: actions/checkout@v2
+    - name: check version
+      run: |
+       emacs --version
+    - name: emacs help
+      run: |
+       emacs --help
+    - name: emacs processing
+      run: |
+       emacs --batch -Q --load publish.el
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+       github_token: ${{ secrets.GITHUB_TOKEN }}
+       publish_dir: ./output

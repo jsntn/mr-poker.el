@@ -1,0 +1,8 @@
+#+TITLE: Mr Poker 0.2.0
+#+DATE: <2023-04-28>
+#+OPTIONS: toc:nil num:nil
+#+OPTIONS: ^:nil
+
+Mr Poker v0.2.0 is released.
+
+👉 https://github.com/jsntn/mr-poker.el/releases/tag/0.2.0
