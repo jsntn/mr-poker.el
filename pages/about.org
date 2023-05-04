@@ -1,6 +1,8 @@
 #+TITLE: About
 #+SLUG: about
 
+[[./static/img_3946.jpg]]
+
 mr-poker.el is an Emacs package that allows you to practice memorizing poker cards. It provides functions for shuffling a deck of cards, displaying a specified number of cards, recalling the shuffled cards.
 
 Read more: https://github.com/jsntn/mr-poker.el/blob/main/README.md
