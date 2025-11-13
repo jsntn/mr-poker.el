@@ -108,7 +108,8 @@ each card one by one to test if they are in the correct order."
     (let ((cards (split-string (buffer-string) "\n" t))
 	  (index (if (and resume mr-poker-last-index)
 		     mr-poker-last-index
-		   0)))
+		   0))
+	  (incorrect-count 0))
       (if current-prefix-arg  ; Check for C-u
 	  (setq cards (reverse cards))) ; If present, reverse cards list
       (while (< index (length cards))
@@ -121,6 +122,7 @@ each card one by one to test if they are in the correct order."
 	  (setq user-input (upcase user-input)) ; Convert to uppercase
 	  (let ((full-name (mr-poker-abbrev-to-full user-input)))
 	    (while (not (equal full-name (nth index cards)))
+	      (setq incorrect-count (1+ incorrect-count))
 	      (message "Incorrect. Try again.")
 	      (setq user-input
 		    (read-string
@@ -136,7 +138,8 @@ each card one by one to test if they are in the correct order."
 		       (1+ index))
 		     full-name)))
 	(setq index (1+ index))
-	(setq mr-poker-last-index index)))))
+	(setq mr-poker-last-index index))
+      (message "Recall complete! Total incorrect guesses: %d" incorrect-count))))
 
 (defun mr-poker-recall-resume ()
   "Resume the mr-poker-recall function from the last index processed."
